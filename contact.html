@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Directory | Baladi IT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-dark-950 text-white min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-xl font-bold tracking-tighter">
+                        <span class="text-brand-500"><i class="fas fa-building"></i> Baladi</span><span
+                            class="text-white"> IT Department</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="contact.html"
+                            class="text-white hover:text-brand-500 px-3 py-2 rounded-md text-sm font-medium transition-colors">Support
+                            Team</a>
+                        <a href="request.html"
+                            class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">Request
+                            Asset</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                        id="mobile-menu-btn">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-dark-900 border-t border-gray-800">
+                <a href="index.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="contact.html" class="text-white block px-3 py-2 rounded-md text-base font-medium">Support
+                    Team</a>
+                <a href="request.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Request
+                    Asset</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="pt-32 pb-12 text-center bg-gradient-to-b from-dark-900 to-dark-950">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Support <span class="text-brand-500">Directory</span></h1>
+        <p class="text-gray-400 max-w-2xl mx-auto">Who to contact for what.</p>
+    </div>
+
+    <!-- Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 flex-grow">
+        <!-- Manager Card -->
+        <div class="max-w-3xl mx-auto mb-16">
+            <div
+                class="glass p-8 rounded-2xl border border-brand-500/30 bg-brand-900/10 text-center relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <i class="fas fa-crown text-8xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-2">IT Manager</h2>
+                <p class="text-gray-400 mb-6">Department Head & Escalations</p>
+                <div class="flex justify-center gap-4">
+                    <a href="mailto:manager@souqalbaladi.com"
+                        class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white px-6 py-2 rounded-full transition-all">
+                        <i class="fas fa-envelope"></i> Contact Manager
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="staff-grid">
+            <!-- Dynamic Content -->
+            <div class="col-span-full text-center py-12">
+                <i class="fas fa-circle-notch fa-spin text-3xl text-brand-500"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark-950 border-t border-gray-800 pt-8 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600 text-sm">
+            <p>&copy; 2026 Baladi IT Department.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/97439927191" target="_blank"
+        class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform z-50">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        // Toggle mobile menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Load Staff
+        window.addEventListener('load', () => {
+            const defaultStaff = [
+                { id: 1, name: 'Mr. Ithumina', role: 'Account & Access', category: 'account', desc: 'Password resets, Email, ERP, POS IDs.', phone: '+974 39927191', email: 'ithumina@example.com', whatsapp: '97439927191' },
+                { id: 2, name: 'Mr. Support', role: 'Network Support', category: 'network', desc: 'Internet, Wi-Fi, VPN connectivity.', phone: '+974 00000000', email: 'net@example.com', whatsapp: '' }
+            ];
+
+            let staff = JSON.parse(localStorage.getItem('itStaff'));
+            if (!staff || staff.length === 0) {
+                staff = defaultStaff;
+                localStorage.setItem('itStaff', JSON.stringify(staff));
+            }
+
+            const grid = document.getElementById('staff-grid');
+            grid.innerHTML = staff.map(s => `
+                <div class="glass p-6 rounded-2xl hover:bg-white/5 transition-all duration-300 border border-white/5 hover:border-brand-500/30 group">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 ${getIconColor(s.category)} rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                            <i class="${getIcon(s.category)} text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg leading-tight">${s.role}</h3>
+                            <p class="text-brand-500 text-sm font-medium">${s.name}</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-6 h-10 overflow-hidden text-ellipsis line-clamp-2">${s.desc}</p>
+                    
+                    <div class="grid grid-cols-${[s.phone, s.email, s.whatsapp].filter(Boolean).length} gap-2">
+                         <a href="tel:${s.phone.replace(/\s/g, '')}" class="bg-dark-800 hover:bg-dark-700 py-2 rounded-lg flex items-center justify-center text-gray-300 hover:text-white transition-colors text-xs font-medium">
+                            <i class="fas fa-phone mr-2"></i> Call
+                        </a>
+                        ${s.email ? `
+                        <a href="mailto:${s.email}" class="bg-blue-900/20 hover:bg-blue-900/40 border border-blue-500/20 py-2 rounded-lg flex items-center justify-center text-blue-400 hover:text-blue-300 transition-colors text-xs font-medium">
+                            <i class="fas fa-envelope mr-2"></i> Email
+                        </a>` : ''}
+                        ${s.whatsapp ? `
+                        <a href="https://wa.me/${s.whatsapp.replace(/[^0-9]/g, '')}" target="_blank" class="bg-green-900/20 hover:bg-green-900/40 border border-green-500/20 py-2 rounded-lg flex items-center justify-center text-green-400 hover:text-green-300 transition-colors text-xs font-medium">
+                            <i class="fab fa-whatsapp mr-2"></i> Chat
+                        </a>` : ''}
+                    </div>
+                </div>
+            `).join('');
+        });
+
+        function getIcon(category) {
+            const icons = {
+                account: 'fas fa-key',
+                network: 'fas fa-wifi',
+                hardware: 'fas fa-desktop',
+                software: 'fab fa-windows',
+                server: 'fas fa-server',
+                other: 'fas fa-headset'
+            };
+            return icons[category] || 'fas fa-headset';
+        }
+
+        function getIconColor(category) {
+            const colors = {
+                account: 'bg-blue-500/20 text-blue-400',
+                network: 'bg-green-500/20 text-green-400',
+                hardware: 'bg-yellow-500/20 text-yellow-400',
+                software: 'bg-purple-500/20 text-purple-400',
+                server: 'bg-red-500/20 text-red-400',
+                other: 'bg-pink-500/20 text-pink-400'
+            };
+            return colors[category] || 'bg-gray-500/20 text-gray-400';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baladi IT Department</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        dark: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-bg {
+            background-image: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.15) 0%, rgba(2, 6, 23, 0) 50%);
+        }
+    </style>
+</head>
+
+<body class="bg-dark-950 text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-xl font-bold tracking-tighter">
+                        <span class="text-brand-500"><i class="fas fa-building"></i> Baladi</span><span
+                            class="text-white"> IT Department</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-white hover:text-brand-500 px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 border-brand-500">Home</a>
+                        <a href="contact.html"
+                            class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-white/5">Support
+                            Team</a>
+                        <a href="request.html"
+                            class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors hover:bg-white/5">Request
+                            Asset</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                        aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-btn">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-dark-900 border-t border-gray-800">
+                <a href="index.html"
+                    class="text-white block px-3 py-2 rounded-md text-base font-medium bg-white/5">Home</a>
+                <a href="contact.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Support
+                    Team</a>
+                <a href="request.html"
+                    class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Request
+                    Asset</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden hero-bg">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+            <div
+                class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-600/10 rounded-full blur-[100px] animate-pulse-slow">
+            </div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[100px] animate-pulse-slow"
+                style="animation-delay: 2s;"></div>
+            <!-- Grid Pattern -->
+            <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            <div
+                class="inline-flex items-center px-4 py-2 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-400 text-sm font-medium mb-8 animate-fade-in-up">
+                <span class="flex h-2 w-2 relative mr-2">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                </span>
+                Internal IT Services Portal
+            </div>
+
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8 animate-fade-in-up"
+                style="animation-delay: 0.1s;">
+                Empowering <br> <span class="gradient-text">Baladi</span> Teams
+            </h1>
+
+            <p class="mt-4 max-w-2xl text-xl text-gray-400 mb-12 animate-fade-in-up" style="animation-delay: 0.2s;">
+                Seamless access to IT support, asset requisitions, and system management.
+                Optimized for efficiency and reliability.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-6 animate-fade-in-up" style="animation-delay: 0.3s;">
+                <a href="request.html"
+                    class="group relative px-8 py-4 bg-brand-600 rounded-full text-white font-semibold shadow-lg shadow-brand-500/40 hover:bg-brand-500 transition-all hover:scale-105 active:scale-95 overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-white/20 group-hover:translate-x-full transition-transform duration-500 -skew-x-12 -translate-x-full">
+                    </div>
+                    <span class="relative flex items-center gap-2"><i class="fas fa-plus-circle"></i> Request
+                        Asset</span>
+                </a>
+                <a href="contact.html"
+                    class="px-8 py-4 bg-white/5 border border-white/10 rounded-full text-white font-semibold hover:bg-white/10 transition-all hover:scale-105 active:scale-95 backdrop-blur-sm flex items-center gap-2">
+                    <i class="fas fa-headset"></i> Contact Support
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Access Section -->
+    <div class="py-20 bg-black/20 backdrop-blur-sm border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="p-8 rounded-3xl glass hover:bg-white/10 transition-all duration-300 group cursor-pointer border border-white/5 hover:border-brand-500/50 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <i class="fas fa-laptop-code text-9xl"></i>
+                    </div>
+                    <div
+                        class="w-16 h-16 bg-brand-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-brand-400">
+                        <i class="fas fa-laptop-medical text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Report Issues</h3>
+                    <p class="text-gray-400 mb-4">Hardware failure? Software glitch? Network down? Report it instantly.
+                    </p>
+                    <a href="contact.html"
+                        class="text-brand-400 font-medium group-hover:translate-x-2 transition-transform inline-flex items-center">Get
+                        Help <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="p-8 rounded-3xl glass hover:bg-white/10 transition-all duration-300 group cursor-pointer border border-white/5 hover:border-purple-500/50 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <i class="fas fa-id-card text-9xl"></i>
+                    </div>
+                    <div
+                        class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-purple-400">
+                        <i class="fas fa-user-lock text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Access Requests</h3>
+                    <p class="text-gray-400 mb-4">Request SAP accounts, Email creation, or POS access IDs securely.</p>
+                    <a href="request.html"
+                        class="text-purple-400 font-medium group-hover:translate-x-2 transition-transform inline-flex items-center">Request
+                        Access <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="p-8 rounded-3xl glass hover:bg-white/10 transition-all duration-300 group cursor-pointer border border-white/5 hover:border-green-500/50 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                        <i class="fas fa-print text-9xl"></i>
+                    </div>
+                    <div
+                        class="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform text-green-400">
+                        <i class="fas fa-box-open text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Consumables</h3>
+                    <p class="text-gray-400 mb-4">Order printer cartridges, toners, and other IT peripherals.</p>
+                    <a href="request.html"
+                        class="text-green-400 font-medium group-hover:translate-x-2 transition-transform inline-flex items-center">Order
+                        Now <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark-950 border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div class="col-span-1">
+                    <a href="#" class="text-xl font-bold tracking-tighter mb-4 block">
+                        <span class="text-brand-500"><i class="fas fa-building"></i> Baladi</span><span
+                            class="text-white"> IT Department</span>
+                    </a>
+                    <p class="text-gray-500 text-sm">Committed to excellence in supporting our internal teams.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Navigate</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-brand-500 transition-colors">Home</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-500 transition-colors">Support Directory</a>
+                        </li>
+                        <li><a href="request.html" class="hover:text-brand-500 transition-colors">Asset Request</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact Admin</h4>
+                    <p class="text-gray-500 text-sm">Managed by Ithumina Abeywickarama</p>
+                    <a href="mailto:ithuminaabeywickrama0000@gmail.com"
+                        class="text-brand-500 text-sm hover:underline mt-2 block">ITHUMINA ABEYWICKARAMA</a>
+                    <a href="admin.html" class="text-gray-600 text-xs hover:text-white mt-4 block"><i
+                            class="fas fa-lock mr-1"></i> Admin Login</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-600 text-sm">
+                <p>&copy; 2026 Baladi IT Department. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

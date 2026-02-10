@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset Request Form - Print</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 800px;
+            mx-auto;
+            padding: 40px;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 20px;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            background: #eee;
+            padding: 5px 10px;
+            margin-bottom: 15px;
+            border-left: 5px solid #000;
+        }
+
+        .row {
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        .field {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .field:last-child {
+            margin-right: 0;
+        }
+
+        .label {
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .input-box {
+            border: 1px solid #ccc;
+            height: 30px;
+            width: 100%;
+            background: #fafafa;
+        }
+
+        .textarea-box {
+            border: 1px solid #ccc;
+            height: 100px;
+            width: 100%;
+            background: #fafafa;
+        }
+
+        .footer {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            page-break-inside: avoid;
+        }
+
+        .signature-box {
+            border-top: 1px solid #000;
+            width: 200px;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+            }
+
+            button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align: right; margin-bottom: 20px;">
+        <button onclick="window.print()"
+            style="padding: 10px 20px; background: #000; color: #fff; border: none; cursor: pointer;">Print
+            Form</button>
+    </div>
+
+    <div class="header">
+        <div class="logo">Baladi IT Department</div>
+        <div class="title">IT Asset Requisition Form</div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Employee Information</div>
+        <div class="row">
+            <div class="field">
+                <span class="label">Employee Name:</span>
+                <div class="input-box"></div>
+            </div>
+            <div class="field">
+                <span class="label">Employee ID:</span>
+                <div class="input-box"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="field">
+                <span class="label">Department:</span>
+                <div class="input-box"></div>
+            </div>
+            <div class="field">
+                <span class="label">Date:</span>
+                <div class="input-box"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Asset Details</div>
+        <div class="row">
+            <div class="field">
+                <span class="label">Asset Type (Hardware/Software/Access):</span>
+                <div class="input-box"></div>
+            </div>
+            <div class="field">
+                <span class="label">Quantity:</span>
+                <div class="input-box"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="field">
+                <span class="label">Priority (Low/Medium/Urgent):</span>
+                <div class="input-box"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="field">
+                <span class="label">Justification / Reason:</span>
+                <div class="textarea-box"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="signature-box">Employee Signature</div>
+        <div class="signature-box">Head of Department Approval</div>
+        <div class="signature-box">IT Manager Approval</div>
+    </div>
+</body>
+
+</html>
